@@ -1,3 +1,8 @@
 Sales in June:
     - 4 macbooks
     - 3 ipads
+
+Sales in July:
+    - 5 macbooks
+    - 2 ipads
+    
