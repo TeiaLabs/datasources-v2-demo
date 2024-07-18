@@ -17,3 +17,8 @@ Sales in September:
     - 30 macbooks
     - 10 ipads
     - 9 iphones
+
+Sales in October:
+    - 29 macbooks
+    - 11 ipads
+    - 4 iphones
