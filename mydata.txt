@@ -22,3 +22,8 @@ Sales in October:
     - 29 macbooks
     - 11 ipads
     - 4 iphones
+
+Sales in November:
+    - 35 macbooks
+    - 11 ipads
+    - 4 iphones
