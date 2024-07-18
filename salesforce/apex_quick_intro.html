@@ -1,0 +1,83 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>WINGMAN PROMPTS UPDATES.md</title><style></style></head><body id="preview">
+<h1 class="code-line" data-line-start="0" data-line-end="1"><a id="Apex_Language_Overview_0"></a>Apex Language Overview</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">Apex is a strongly typed, object-oriented programming language that allows developers to execute flow and transaction control statements on the Salesforce platform server in conjunction with calls to the API.</p>
+<h2 class="code-line" data-line-start="4" data-line-end="5"><a id="Table_of_Contents_4"></a>Table of Contents</h2>
+<ul>
+<li class="has-line-data" data-line-start="6" data-line-end="7"><a href="#introduction">Introduction</a></li>
+<li class="has-line-data" data-line-start="7" data-line-end="8"><a href="#key-features">Key Features</a></li>
+<li class="has-line-data" data-line-start="8" data-line-end="9"><a href="#syntax-and-structure">Syntax and Structure</a></li>
+<li class="has-line-data" data-line-start="9" data-line-end="10"><a href="#sample-code">Sample Code</a></li>
+<li class="has-line-data" data-line-start="10" data-line-end="11"><a href="#best-practices">Best Practices</a></li>
+<li class="has-line-data" data-line-start="11" data-line-end="13"><a href="#resources">Resources</a></li>
+</ul>
+<h2 class="code-line" data-line-start="13" data-line-end="14"><a id="Introduction_13"></a>Introduction</h2>
+<p class="has-line-data" data-line-start="15" data-line-end="16">Apex is a proprietary language developed by <a href="http://Salesforce.com">Salesforce.com</a>. It is similar to Java and C# and is specially designed for building business logic within the Salesforce platform. Apex enables developers to add and interact with data in the Lightning Platform, and it can be used to create web services, write complex business processes, and much more.</p>
+<h2 class="code-line" data-line-start="17" data-line-end="18"><a id="Key_Features_17"></a>Key Features</h2>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strongly Typed</td>
+<td>Apex is a strongly typed language, requiring explicit declaration of variable types.</td>
+</tr>
+<tr>
+<td>Object-Oriented</td>
+<td>Supports classes, interfaces, and inheritance.</td>
+</tr>
+<tr>
+<td>Data Manipulation</td>
+<td>Apex provides built-in support for DML operations such as <code>insert</code>, <code>update</code>, <code>delete</code>, and <code>query</code> on Salesforce records.</td>
+</tr>
+<tr>
+<td>Testing Framework</td>
+<td>Apex includes a testing framework to write and execute tests that ensure code coverage and application stability.</td>
+</tr>
+<tr>
+<td>Governor Limits</td>
+<td>Enforces limits to ensure that Apex code does not monopolize shared resources.</td>
+</tr>
+</tbody>
+</table>
+<h2 class="code-line" data-line-start="27" data-line-end="28"><a id="Syntax_and_Structure_27"></a>Syntax and Structure</h2>
+<p class="has-line-data" data-line-start="29" data-line-end="30">Apex syntax is similar to Java and uses dot notation to access object members. Classes, methods, and variables must be declared with explicit data types.</p>
+<h3 class="code-line" data-line-start="31" data-line-end="32"><a id="Classes_and_Methods_31"></a>Classes and Methods</h3>
+<pre><code class="has-line-data" data-line-start="34" data-line-end="40">public class MyFirstClass {
+    public String sayHello(String name) {
+        return 'Hello, ' + name + '!';
+    }
+}
+</code></pre>
+<h3 class="code-line" data-line-start="41" data-line-end="42"><a id="Variables_and_Data_Types_41"></a>Variables and Data Types</h3>
+<pre><code class="has-line-data" data-line-start="44" data-line-end="48">Integer myInteger = 123;
+String myString = 'OSF Digital';
+List&lt;Account&gt; accounts = [SELECT Id, Name FROM Account LIMIT 10];
+</code></pre>
+<h2 class="code-line" data-line-start="49" data-line-end="50"><a id="Sample_Code_49"></a>Sample Code</h2>
+<p class="has-line-data" data-line-start="51" data-line-end="52">Below is a simple example of an Apex trigger that automatically populates the <code>Description</code> field of a new <code>Account</code> record with a custom message.</p>
+<pre><code class="has-line-data" data-line-start="54" data-line-end="60">trigger AccountBeforeInsert on Account (before insert) {
+    for (Account acc : Trigger.new) {
+        acc.Description = 'This account was created on ' + String.valueOf(Date.today()) + ' and is managed by OSF Digital.';
+    }
+}
+</code></pre>
+<h2 class="code-line" data-line-start="61" data-line-end="62"><a id="Best_Practices_61"></a>Best Practices</h2>
+<ul>
+<li class="has-line-data" data-line-start="63" data-line-end="64"><strong>Bulkify Your Code</strong>: Ensure your code properly handles more than one record at a time.</li>
+<li class="has-line-data" data-line-start="64" data-line-end="65"><strong>Use Collections</strong>: Leverage lists, sets, and maps to efficiently handle data.</li>
+<li class="has-line-data" data-line-start="65" data-line-end="66"><strong>Write Efficient SOQL Queries</strong>: Avoid queries inside loops and limit the number of records returned.</li>
+<li class="has-line-data" data-line-start="66" data-line-end="67"><strong>Implement Error Handling</strong>: Use try-catch blocks to gracefully handle exceptions.</li>
+<li class="has-line-data" data-line-start="67" data-line-end="69"><strong>Test Thoroughly</strong>: Write comprehensive test methods to cover various scenarios and ensure at least 75% code coverage.</li>
+</ul>
+<h2 class="code-line" data-line-start="69" data-line-end="70"><a id="Resources_69"></a>Resources</h2>
+<ul>
+<li class="has-line-data" data-line-start="71" data-line-end="72"><a href="https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/">Salesforce Developers Documentation</a></li>
+<li class="has-line-data" data-line-start="72" data-line-end="73"><a href="https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_dev_guide.htm">Apex Developer Guide</a></li>
+<li class="has-line-data" data-line-start="73" data-line-end="75"><a href="https://trailhead.salesforce.com/en/content/learn/modules/apex_database">Trailhead Apex Modules</a></li>
+</ul>
+<p class="has-line-data" data-line-start="75" data-line-end="76">This markdown file serves as a brief introduction to the Apex programming language, its features, and some best practices for writing efficient Apex code.</p>
+</body></html>
