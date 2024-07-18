@@ -12,3 +12,8 @@ Sales in August:
     - 22 macbooks
     - 1 ipad
     - 5 iphones
+
+Sales in September:
+    - 30 macbooks
+    - 10 ipads
+    - 9 iphones
