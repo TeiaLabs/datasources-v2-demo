@@ -29,6 +29,6 @@ Sales in November:
     - 4 iphones
 
 Sales in December
-    - 40 macbooks
-    - 11 ipads
-    - 4 iphones
+    - 36 macbooks
+    - 17 ipads
+    - 56 iphones
